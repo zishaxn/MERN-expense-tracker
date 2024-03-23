@@ -1,4 +1,4 @@
-import { deleteTransaction } from "../utils/APIRoutes.js";
+import { deleteTransaction } from "../utils/APIRoutes";
 const History = ({ transactions, setTransactions }) => {
   // Expense Tracker working///////////////////////////////////////
 
