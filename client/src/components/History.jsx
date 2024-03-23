@@ -3,6 +3,7 @@ const History = ({ transactions, setTransactions }) => {
   // Expense Tracker working///////////////////////////////////////
 
   const handleDelete = async (id) => {
+    console.log(id);
     try {
       const response = await fetch(deleteTransaction(id), {
         method: "DELETE",
