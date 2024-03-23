@@ -1,0 +1,155 @@
+/* Importing luxurious font family */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy', serif;
+  /* Applying luxurious font */
+  background-color: #ebe7e7;
+  /* Setting background color */
+  color: black;
+  /* Setting text color */
+}
+
+#h1 {
+  text-align: center;
+}
+
+.main-container {
+  width: 30%;
+  /* Adjust container width as needed */
+  margin: 0 auto;
+
+}
+
+#balance-section h2 {
+  margin-top: -15px;
+  font-weight: 600;
+  color: red;
+}
+
+.income-expense {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#border {
+  height: 4.5rem;
+  width: 1px;
+  background: #232323;
+}
+
+.income {
+  color: green;
+  text-align: center;
+}
+
+.expense {
+  color: red;
+  text-align: center;
+}
+
+
+/* list */
+.history h2 {
+  margin-bottom: 2px;
+  border-bottom: 2px solid #151414;
+}
+
+.list {
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.list li {
+  background-color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.list li.plus {
+  border-right: 5px solid green;
+}
+
+.list li.minus {
+  border-right: 5px solid red;
+}
+
+.delete-btn {
+  background-color: red;
+  border: none;
+  padding: 8px;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.add-transac h2 {
+  margin-bottom: 2px;
+  border-bottom: 2px solid #151414;
+}
+
+/* transaction */
+
+.add-transac form>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+input {
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:hover {
+  background: #5542b7;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
