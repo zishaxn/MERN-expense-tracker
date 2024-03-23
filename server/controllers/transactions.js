@@ -46,7 +46,7 @@ module.exports.deleteTransactions = async (req, res, next) => {
     const transactionId = req.params.id;
     const transaction = await Transactions.findById(transactionId);
     if (!transaction) {
-      return res.status(404).json({ error: "Transaction Does Not Exist" });
+      res.status(404).json({ error: "Transaction Does Not Exist" });
     }
 
     await Transactions.findByIdAndDelete(transactionId);
