@@ -41,15 +41,18 @@ module.exports.addTransactions = async (req, res, next) => {
 // @route  delete /api/v1/transactions/:id
 // @access public
 module.exports.deleteTransactions = async (req, res, next) => {
-  console.log(req.params, "&&", req);
+  console.log(req.params);
   try {
     const transactionId = req.params.id;
+    console.log(transactionId);
     const transaction = await Transactions.findById(transactionId);
+    console.log(transaction);
     if (!transaction) {
       res.status(404).json({ error: "Transaction Does Not Exist" });
     }
 
-    await Transactions.findByIdAndDelete(transactionId);
+    const resposne = await Transactions.findByIdAndDelete(transactionId);
+    console.log(resposne);
     res.json({ message: "Transaction deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Server Error" });
