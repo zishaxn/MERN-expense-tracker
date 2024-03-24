@@ -6,11 +6,14 @@ const History = ({ transactions, setTransactions }) => {
 
 
   const handleDelete = async (id) => {
+    console.log("delet hi nahi hora yar");
     try {
-      await axios.delete(deleteTransaction(id));
+      const response = await axios.delete(deleteTransaction(id));
+      console.log(response);
       setTransactions(
         transactions.filter((transaction) => transaction._id !== id)
       );
+      console.log(transactions);
     } catch (error) {
       console.error("Error deleting transaction:", error);
       alert("Failed to delete transaction");
