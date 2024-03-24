@@ -12,13 +12,13 @@ const transactions = require("./routes/transactions");
 
 // Middleware
 app.use(cors());
-app.use(
-  cors({
-    origin: ["https://mern-frontend-express.vercel.app/"],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    // credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["https://mern-frontend-express.vercel.app/"],
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     // credentials: true,
+//   })
+// );
 app.use(express.json()); // Parse JSON bodies
 
 // routes
